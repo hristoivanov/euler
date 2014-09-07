@@ -101,5 +101,5 @@ aux=[37107287533902102798797998220837590246510135740250,
 
 import time
 start=time.time()
-ans=str(sum(aux))[:10]
-print 'Answer: '+`ans`+' Time: '+`time.time()-start`
+the_ans=str(sum(aux))[:10]
+print 'Answer: '+the_ans+' Time: '+`time.time()-start`

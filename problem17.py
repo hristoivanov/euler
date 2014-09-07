@@ -8,31 +8,31 @@ andd='and'
 import time
 start=time.time()
 
-the_sum=0
+the_ans=0
 for x in one_nine:
-	the_sum+=len(x)
+	the_ans+=len(x)
 
 for x in ten_nineteen:
-	the_sum+=len(x)
+	the_ans+=len(x)
 
 for x in twenty_ninety:
-	the_sum+=len(x)
+	the_ans+=len(x)
 	for y in one_nine:
-		the_sum+=len(x)+len(y)
+		the_ans+=len(x)+len(y)
 
 
 for x in one_nine:
-	the_sum+=len(x+hundred)
+	the_ans+=len(x+hundred)
 	for y in one_nine:
-		the_sum+=len(x+hundred+andd+y)
+		the_ans+=len(x+hundred+andd+y)
 
 	for y in ten_nineteen:
-		the_sum+=len(x+hundred+andd+y)
+		the_ans+=len(x+hundred+andd+y)
 
 	for y in twenty_ninety:
-		the_sum+=len(x+hundred+andd+y)
+		the_ans+=len(x+hundred+andd+y)
 		for z in one_nine:
-			the_sum+=len(x+hundred+andd+y+z)
+			the_ans+=len(x+hundred+andd+y+z)
 	
-the_sum+=len('one'+thousand)
-print 'Answer: '+`the_sum`+' Time: '+`time.time()-start`
+the_ans+=len('one'+thousand)
+print 'Answer: '+`the_ans`+' Time: '+`time.time()-start`

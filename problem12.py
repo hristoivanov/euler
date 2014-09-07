@@ -34,5 +34,6 @@ while True:
 	print facts
 
 	if facts >= 500:
-		print 'Answer: '+`triangle`+' Time: '+`time.time()-start`
+		the_ans=triangle
+		print 'Answer: '+`the_ans`+' Time: '+`time.time()-start`
 		break;

@@ -46,5 +46,5 @@ def the_sum(posx, posy):
 	return the_array[posx][posy]+max(the_sum(posx+1,posy), the_sum(posx+1,posy+1))
 
 
-ans=the_sum(0,0)
-print 'Answer: '+`ans`+' Time: '+`time.time()-start`
+the_ans=the_sum(0,0)
+print 'Answer: '+`the_ans`+' Time: '+`time.time()-start`

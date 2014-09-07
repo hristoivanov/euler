@@ -15,12 +15,12 @@ start=time.time()
 
 known={}
 the_max=0
-ans=0
+the_ans=0
 for x in range(1,1000*1000):
 	lenght=chain_lenght(x, known)
 	known[x]=lenght
 	if the_max<lenght:
 		the_max=lenght
-		ans=x
+		the_ans=x
 
-print 'Answer: '+`ans`+' Time: '+`time.time()-start`
+print 'Answer: '+`the_ans`+' Time: '+`time.time()-start`

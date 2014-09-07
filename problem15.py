@@ -26,5 +26,5 @@ def paths(posx, posy):
 
 import time
 start=time.time()
-ans=paths2(20)
-print 'Answer: '+`ans`+' Time: '+`time.time()-start`
+the_ans=paths2(20)
+print 'Answer: '+`the_ans`+' Time: '+`time.time()-start`

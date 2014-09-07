@@ -3,34 +3,33 @@ aux=[[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],[4
 
 start=time.time()
 
-the_max=0
+the_ans=0
 #Right_Left
 for x in xrange(0,20):
 	for y in xrange(0,17):
 		the_pro=aux[x][y]*aux[x][y+1]*aux[x][y+2]*aux[x][y+3]
-		if the_pro>the_max:
-			the_max=the_pro
+		if the_pro>the_ans:
+			the_ans=the_pro
 			
 # Up_down
 for x in xrange(0,17):
 	for y in xrange(0,20):
 		the_pro=aux[x][y]*aux[x+1][y]*aux[x+2][y]*aux[x+3][y]
-		if the_pro>the_max:
-			the_max=the_pro
+		if the_pro>the_ans:
+			the_ans=the_pro
 
 # WN-ES
 for x in xrange(0,17):
 	for y in xrange(0,17):
 		the_pro=aux[x][y]*aux[x+1][y+1]*aux[x+2][y+2]*aux[x+3][y+3]
-		if the_pro>the_max:
-			the_max=the_pro
+		if the_pro>the_ans:
+			the_ans=the_pro
 
 # EN-WS
-the_max=0
 for x in xrange(0,17):
 	for y in xrange(3,20):
 		the_pro=aux[x][y]*aux[x+1][y-1]*aux[x+2][y-2]*aux[x+3][y-3]
-		if the_pro>the_max:
-			the_max=the_pro
+		if the_pro>the_ans:
+			the_ans=the_pro
 
-print 'Answer: '+`the_max`+' Time: '+`time.time()-start`
+print 'Answer: '+`the_ans`+' Time: '+`time.time()-start`
