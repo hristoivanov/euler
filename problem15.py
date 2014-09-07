@@ -1,7 +1,3 @@
-import time
-endx=10
-endy=10
-
 #Pascal triangle
 def paths2(num):
 	num+=1
@@ -16,6 +12,8 @@ def paths2(num):
 	return solution[num-1][num-1]
 
 # Too slow
+endx=10
+endy=10
 def paths(posx, posy):
 	if posx==endx or posy==endy:
 		return 1
@@ -26,6 +24,7 @@ def paths(posx, posy):
 
 	return paths_right+paths_down
 
+import time
 start=time.time()
-print paths2(20)
-print time.time()-start
+ans=paths2(20)
+print 'Answer: '+`ans`+' Time: '+`time.time()-start`

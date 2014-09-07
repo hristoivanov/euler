@@ -1,5 +1,6 @@
 import calendar
 import time
+start=time.time()
 c=calendar.TextCalendar(calendar.MONDAY)
 
 count=0
@@ -13,4 +14,4 @@ for x in range(1901, 2001):
 				count+=1
 			break;
 
-print count
+print 'Answer: '+`count`+' Time: '+`time.time()-start`

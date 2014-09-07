@@ -1,6 +1,9 @@
 with open('p022_names.txt') as f:
 	    content = f.readlines()
 
+import time
+start=time.time()
+
 names=content[0].replace('"','').split(',')
 names=sorted(names)
 
@@ -13,4 +16,4 @@ for name in names:
 	total_score+=name_score*pos
 	pos+=1
 
-print total_score
+print 'Answer: '+`total_score`+' Time: '+`time.time()-start`

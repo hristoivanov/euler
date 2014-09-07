@@ -1,11 +1,20 @@
 import math
 import time
+
+def factors(num):
+	factors=0
+	for x in range(1, int(math.floor( math.sqrt(num)))):
+		if num%x==0:
+			factors+=2
+	return factors
+			
+start=time.time()
 x=0
 triangle=0
 while True:
 	x+=1
 	triangle+=x
-
+	#For every prime number  that you are divisible by, the number of factors increases by two. I dont know why, but this works.
 	if triangle%2!=0:
 		continue
 	if triangle%3!=0:
@@ -21,15 +30,9 @@ while True:
 	if triangle%17!=0:
 		continue
 	
-	factors=0
-	the_factors=[]
-	for y in range(1,int(math.floor(triangle))):
-		if triangle % y==0:
-			factors+=1
-			the_factors.append(y)
+	facts=factors(triangle)
+	print facts
 
-
-	print `triangle`+' has '+`factors+1`+' facors...'+`the_factors[:]`
-	if factors >= 500:
-		print `triangle`+' has '+`factors+1`+' facors...'+`the_factors[:]`
+	if facts >= 500:
+		print 'Answer: '+`triangle`+' Time: '+`time.time()-start`
 		break;

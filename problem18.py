@@ -14,6 +14,9 @@ aux=["75"
 ,"63 66 04 68 89 53 67 30 73 16 69 87 40 31"
 ,"04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"]
 
+import time
+start=time.time()
+
 aux2=[]
 for x in aux:
 	aux2.append(x.split(' '))
@@ -43,4 +46,5 @@ def the_sum(posx, posy):
 	return the_array[posx][posy]+max(the_sum(posx+1,posy), the_sum(posx+1,posy+1))
 
 
-print the_sum(0,0)
+ans=the_sum(0,0)
+print 'Answer: '+`ans`+' Time: '+`time.time()-start`
