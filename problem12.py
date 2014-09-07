@@ -3,9 +3,11 @@ import time
 
 def factors(num):
 	factors=0
-	for x in range(1, int(math.floor( math.sqrt(num)))):
+	for x in range(1, int(math.floor( math.sqrt(num)))+1):
 		if num%x==0:
-			factors+=2
+			factors+=1
+			if x!=num/x:
+				factors+=1
 	return factors
 			
 start=time.time()

@@ -3,10 +3,12 @@ def sum_divisors(num):
 	divisors=[1]
 	if num==1:
 		return 1
-	for x in range(2, int(math.floor( math.sqrt(num)))):
+	for x in range(2, int(math.floor( math.sqrt(num)))+1):
 		if num%x==0:
 			divisors.append(x)
-			divisors.append(num/x)
+			res=num/x
+			if res!=x:
+				divisors.append(num/x)
 
 	return sum(divisors)
 
