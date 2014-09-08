@@ -33,11 +33,11 @@ start=time.time()
 abundants=calc_abundants()
 # More of the abundant numbers are even, there is a few odd abundant numbers
 
-# First we discart the even numbers that cant be expresed as a sum of two abundant numbers.
+# First we discart the even numbers that cant be expressed as a sum of two abundant numbers.
 # The diference between consecutive even abundant numbers is as much 6 and most of the times 4 or 2.
 # This make easy to express most of the even numbers as a sum of two abundant numbers
 unreachable=set([2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26, 28, 34, 46])
-# All the other even numbers can be expresed as a sum of two abundant numbers
+# All the other even numbers can be expressed as a sum of two abundant numbers
 
 # We will add all the odd numbers and then we will remove the one that we arent interested in.
 odd=1
@@ -59,14 +59,12 @@ for num in abundants:
 		abundants_even.add(num)
 
 
-# Calculate all the odd numbers that can be expresed as a sum of two abundant numbers
-odd_bad=set()
+# Calculate all the odd numbers that can be expressed as a sum of two abundant numbers
 for odd in abundants_odd:
 	for even in abundants_even:
 		the_bad=odd+even
 		if the_bad>28123:
 			break
-		odd_bad.add(the_bad)
 		unreachable.discard(the_bad)
 
 # Finally print the answer
