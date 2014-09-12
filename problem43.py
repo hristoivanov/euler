@@ -2,26 +2,6 @@ import math
 import time
 start=time.time()
 
-def calc_digit(num, pos):
-	pos_fact=math.factorial(pos)
-	res=num/pos_fact
-	rem=num%pos_fact
-	return res, rem
-
-
-def calc_perm(num, digits):
-	if len(digits)==1:
-		return str(digits.pop())
-
-	res, rem=calc_digit(num, len(digits)-1)
-	digit=str(digits.pop(res))
-	return digit+ calc_perm(rem, digits)
-
-def gen_pan_numbers(num_digits):
-	for x in range (math.factorial(num_digits)-1, -1, -1):
-		digits=[y for y in range(0,num_digits)]
-		yield calc_perm(x, digits)
-
 def is_pan(num):
 	num=str(num)
 	digits=set()
@@ -31,24 +11,6 @@ def is_pan(num):
 	if len(num)==len(digits):
 		return True
 	return False
-
-
-def is_special(num):
-	if int(num[3])%2!=0:
-		return False
-	if int(num[2:5])%3!=0:
-		return False
-	if int(num[5])%5!=0:
-		return False
-	if int(num[4:7])%7!=0:
-		return False
-	if int(num[5:8])%11!=0:
-		return False
-	if int(num[6:9])%13!=0:
-		return False
-	if int(num[7:10])%17!=0:
-		return False
-	return True
 
 multiples_17=[]
 count=1
