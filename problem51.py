@@ -7,7 +7,7 @@ def generate_primes(target):
 	for x in range(4, target, 2):
 		nums[x] = False
 	root_limit = int(target**.5)+1
-	for x in range(3,root_limit):
+	for x in range(3, root_limit):
 		if nums[x]:
 			for y in range(x*x, target, 2*x):
 				nums[y] = False
