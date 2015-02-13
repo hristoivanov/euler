@@ -73,6 +73,7 @@ Add the C# source code for the first 10 problems.
 |57|153|0.008|
 |58|26241|5.361|Too slow. Normal time compared with most of the solutions of other people|
 |59|107359|0.003|
-|60|26033|8.116|
+|60|26033|8.116|Too slow.
+|61|28684|0.30|
 |....|....|....|
 |67|7273|0.021|
